@@ -1,0 +1,13 @@
+-lib ithril:1.0.3
+-cp src
+-cp web
+-main Web
+--each
+-cmd lessc web/layout.less assets/layout.css
+-D js-flatten
+-D js-es5
+-D analyzer
+-dce full
+-js assets/main.js
+--next
+--interp
