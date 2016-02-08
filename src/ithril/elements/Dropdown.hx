@@ -19,7 +19,6 @@ typedef Item = Option<String>;
 class Dropdown extends Field<DropdownOptions, String> {
 	var query: String = null;
 	var show = false;
-	var container: Dynamic = null;
 	var focusEl = null;
 	
 	override public function mount() {
@@ -33,42 +32,19 @@ class Dropdown extends Field<DropdownOptions, String> {
 		#if js 
 		if (this.show) {
 			focusEl.focus();
-			js.Browser.window.addEventListener('click', close);
 		} else {
 			focusEl.blur();
-			js.Browser.window.removeEventListener('click', close);
+			query = null;
 		}
 		#end
 	}
-	
-	#if js 
-	function close(e) {
-		if (eventInContainer(e)) return;
-		open(false);
-		untyped m.redraw();
-	}
-	#end
-	
-	function eventInContainer(e) {
-		#if js 
-		var el: js.html.Node = e.target;
-		while (el.parentNode != null) {
-			el = el.parentNode;
-			if (container == el) return true;
-		}
-		#end
-		return false;
-	}
-	
 	
 	function openClick(e) {
-		trace(e);
 		e.preventDefault();
 		open();
 	}
 	
 	function focusChange(show: Bool, e: FieldEvent<Text>) {
-		trace(e);
 		open(show);
 	}
 	
@@ -94,7 +70,6 @@ class Dropdown extends Field<DropdownOptions, String> {
 	}
 	
 	function config(el) {
-		container=el;
 		if (!state.searchable) focusEl = el;
 	}
 	

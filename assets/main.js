@@ -77,42 +77,42 @@ Web.main = function() {
 Web.__super__ = ithril_ComponentAbstract;
 Web.prototype = $extend(ithril_ComponentAbstract.prototype,{
 	view: function() {
-		return [{ tag : "title", attrs : { }, children : ["Ithril Elements"]},{ tag : "meta", attrs : { charset : "utf-8"}, children : []},{ tag : "link", attrs : { rel : "stylesheet", href : "assets/layout.css"}, children : []},{ tag : "body", attrs : { }, children : [this.body()]}];
+		return [{ tag : "title", attrs : { }, children : ["Ithril Elements"]},{ tag : "meta", attrs : { charset : "utf-8"}, children : []},{ tag : "meta", attrs : { content : "width=device-width, initial-scale=1.0", name : "viewport"}, children : []},{ tag : "link", attrs : { rel : "stylesheet", href : "assets/layout.css"}, children : []},{ tag : "body", attrs : { }, children : [this.body()]}];
 	}
 	,body: function() {
 		var tmp;
 		var tmp6;
 		var children1 = ["Tab 1 content"];
-		var tmp9 = ithril_component_ComponentCache.getComponent_ithril_elements_Tab("3124583610ff2c5779db1100de5625a9",ithril_elements_Tab,children1,ithril_Attributes.attrs("Tab 1"));
+		var tmp9 = ithril_component_ComponentCache.getComponent_ithril_elements_Tab("cd35e3fc19c83f4f0ca28f34487b61a3",ithril_elements_Tab,children1,ithril_Attributes.attrs("Tab 1"));
 		tmp9.setChildren(children1);
 		tmp9.setState(ithril_Attributes.attrs("Tab 1"));
 		tmp6 = tmp9;
 		var tmp7;
 		var children2 = ["Tab 2 content"];
-		var tmp10 = ithril_component_ComponentCache.getComponent_ithril_elements_Tab("b18b105260432f48148c9fcf48a9d2b2",ithril_elements_Tab,children2,ithril_Attributes.attrs("Tab 2"));
+		var tmp10 = ithril_component_ComponentCache.getComponent_ithril_elements_Tab("a94700b6a96a970b681a7b4884649b27",ithril_elements_Tab,children2,ithril_Attributes.attrs("Tab 2"));
 		tmp10.setChildren(children2);
 		tmp10.setState(ithril_Attributes.attrs("Tab 2"));
 		tmp7 = tmp10;
 		var children = [tmp6,tmp7];
-		var tmp8 = ithril_component_ComponentCache.getComponent_ithril_elements_Tabs("fe10c944eac8a6d8f1c53ef84ac6a941",ithril_elements_Tabs,children,{ });
+		var tmp8 = ithril_component_ComponentCache.getComponent_ithril_elements_Tabs("09fdaaab7df8e833000d8440dd15e77c",ithril_elements_Tabs,children,{ });
 		tmp8.setChildren(children);
 		tmp8.setState({ });
 		tmp = tmp8;
 		var tmp1;
 		var children3 = [];
-		var tmp11 = ithril_component_ComponentCache.getComponent_ithril_elements_Text("ede26de43d2cda0511f28582d2e2fce7",ithril_elements_Text,children3,{ });
+		var tmp11 = ithril_component_ComponentCache.getComponent_ithril_elements_Text("22159142f138a885436ddecf66bcc93f",ithril_elements_Text,children3,{ });
 		tmp11.setChildren(children3);
 		tmp11.setState({ });
 		tmp1 = tmp11;
 		var tmp2;
 		var children4 = [];
-		var tmp12 = ithril_component_ComponentCache.getComponent_ithril_elements_Text("1dec72419342b38512b1be388f09d9b9",ithril_elements_Text,children4,{ multiline : true});
+		var tmp12 = ithril_component_ComponentCache.getComponent_ithril_elements_Text("332fabd71a8470736b5d0fe23bcb5696",ithril_elements_Text,children4,{ multiline : true});
 		tmp12.setChildren(children4);
 		tmp12.setState({ multiline : true});
 		tmp2 = tmp12;
 		var tmp3;
 		var children5 = [];
-		var tmp13 = ithril_component_ComponentCache.getComponent_ithril_elements_Checkbox("29702cb6c9439afc065b6289dcad85e9",ithril_elements_Checkbox,children5,{ label : "Checkbox"});
+		var tmp13 = ithril_component_ComponentCache.getComponent_ithril_elements_Checkbox("186873e529ac56d53efc8d098c7bb912",ithril_elements_Checkbox,children5,{ label : "Checkbox"});
 		tmp13.setChildren(children5);
 		tmp13.setState({ label : "Checkbox"});
 		tmp3 = tmp13;
@@ -128,7 +128,7 @@ Web.prototype = $extend(ithril_ComponentAbstract.prototype,{
 			if(__map_reserved[country] != null) _g.setReserved(country,country); else _g.h[country] = country;
 		}
 		tmp14 = _g;
-		var tmp15 = ithril_component_ComponentCache.getComponent_ithril_elements_Dropdown("a7e7bde47ec1375f6f1e68a74e3fdef1",ithril_elements_Dropdown,children6,{ options : tmp14});
+		var tmp15 = ithril_component_ComponentCache.getComponent_ithril_elements_Dropdown("7082d1c18305f38a59a64fc1a3b81566",ithril_elements_Dropdown,children6,{ options : tmp14});
 		tmp15.setChildren(children6);
 		var tmp16;
 		var _g11 = new haxe_ds_StringMap();
@@ -154,7 +154,7 @@ Web.prototype = $extend(ithril_ComponentAbstract.prototype,{
 			if(__map_reserved[country2] != null) _g4.setReserved(country2,country2); else _g4.h[country2] = country2;
 		}
 		tmp17 = _g4;
-		var tmp18 = ithril_component_ComponentCache.getComponent_ithril_elements_Dropdown("ab335cbedb19fb1a72f19576bf86787a",ithril_elements_Dropdown,children7,{ searchable : true, options : tmp17});
+		var tmp18 = ithril_component_ComponentCache.getComponent_ithril_elements_Dropdown("daf2a288c34860c2c91bb66e2e3ba95d",ithril_elements_Dropdown,children7,{ searchable : true, options : tmp17});
 		tmp18.setChildren(children7);
 		var tmp19;
 		var _g13 = new haxe_ds_StringMap();
@@ -469,7 +469,6 @@ ithril_elements_Checkbox.prototype = $extend(ithril_elements_Field.prototype,{
 });
 var ithril_elements_Dropdown = function() {
 	this.focusEl = null;
-	this.container = null;
 	this.show = false;
 	this.query = null;
 	ithril_elements_Field.call(this);
@@ -484,34 +483,16 @@ ithril_elements_Dropdown.prototype = $extend(ithril_elements_Field.prototype,{
 	,open: function(show) {
 		this.show = show == null?!this.show:show;
 		this.dispatch(this.show?ithril_elements_FieldEventType.Focus:ithril_elements_FieldEventType.Blur);
-		if(this.show) {
-			this.focusEl.focus();
-			window.addEventListener("click",$bind(this,this.close));
-		} else {
+		if(this.show) this.focusEl.focus(); else {
 			this.focusEl.blur();
-			window.removeEventListener("click",$bind(this,this.close));
+			this.query = null;
 		}
-	}
-	,close: function(e) {
-		if(this.eventInContainer(e)) return;
-		this.open(false);
-		m.redraw();
-	}
-	,eventInContainer: function(e) {
-		var el = e.target;
-		while(el.parentNode != null) {
-			el = el.parentNode;
-			if(this.container == el) return true;
-		}
-		return false;
 	}
 	,openClick: function(e) {
-		console.log(e);
 		e.preventDefault();
 		this.open();
 	}
 	,focusChange: function(show,e) {
-		console.log(e);
 		this.open(show);
 	}
 	,select: function(key) {
@@ -544,7 +525,6 @@ ithril_elements_Dropdown.prototype = $extend(ithril_elements_Field.prototype,{
 		return { };
 	}
 	,config: function(el) {
-		this.container = el;
 		if(!this.state.searchable) this.focusEl = el;
 	}
 	,view: function() {
@@ -562,7 +542,7 @@ ithril_elements_Dropdown.prototype = $extend(ithril_elements_Field.prototype,{
 				var _this = this.state.options;
 				if(__map_reserved[key] != null) tmp7 = _this.getReserved(key); else tmp7 = _this.h[key];
 				var children1 = [tmp7];
-				var tmp8 = ithril_component_ComponentCache.getComponent_ithril_elements_Option__("1d0861baa76600a196a01a956c9a8403",ithril_elements_Option,children1,{ key : key});
+				var tmp8 = ithril_component_ComponentCache.getComponent_ithril_elements_Option__("036e8b64c0343ba261e1adecc23d0899",ithril_elements_Option,children1,{ key : key});
 				tmp8.setChildren(children1);
 				tmp8.setState({ key : key});
 				tmp6 = tmp8;
@@ -570,7 +550,7 @@ ithril_elements_Dropdown.prototype = $extend(ithril_elements_Field.prototype,{
 			}
 			tmp4 = _g;
 			var children = tmp4;
-			var tmp5 = ithril_component_ComponentCache.getComponent_ithril_elements_OptionList__("8c773afb2a5bb3cc305fcb3d80e86732",ithril_elements_OptionList,children,{ filter : this.query != null?$bind(this,this.filter):null, height : 40, onchange : function(e) {
+			var tmp5 = ithril_component_ComponentCache.getComponent_ithril_elements_OptionList__("1844b1b77d0b86a615890843c4c0f268",ithril_elements_OptionList,children,{ filter : this.query != null?$bind(this,this.filter):null, height : 40, onchange : function(e) {
 				_g1.select(e.field.value);
 			}});
 			tmp5.setChildren(children);
@@ -600,7 +580,7 @@ ithril_elements_Dropdown.prototype = $extend(ithril_elements_Field.prototype,{
 				var _this1 = this.state.options;
 				if(__map_reserved[key1] != null) tmp12 = _this1.getReserved(key1); else tmp12 = _this1.h[key1];
 			}
-			var tmp13 = ithril_component_ComponentCache.getComponent_ithril_elements_Text("9285dd9ca664aa1078057f1328d815ec",ithril_elements_Text,children2,{ onfocus : tmp10, onblur : tmp11, oninput : function(e2) {
+			var tmp13 = ithril_component_ComponentCache.getComponent_ithril_elements_Text("e02b80f1363dba3bce1083d241fb4ac5",ithril_elements_Text,children2,{ onfocus : tmp10, onblur : tmp11, oninput : function(e2) {
 				_g1.query = e2.field.value;
 			}, value : this.query, placeholder : tmp12});
 			tmp13.setChildren(children2);

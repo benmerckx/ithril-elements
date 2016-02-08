@@ -10,6 +10,7 @@ class Web extends Component {
 	public function view() [
 		(title > 'Ithril Elements')
 		(meta[charset="utf-8"])
+		(meta[name="viewport"][content="width=device-width, initial-scale=1.0"])
 		(link[href="assets/layout.css"][rel="stylesheet"])
 		(body)
 			[body()]
