@@ -1,0 +1,15 @@
+&.text {
+	textarea.field {
+		overflow: hidden;
+		min-height: 60px;
+		
+		+.mirror {
+			visibility: hidden;
+			position: absolute;
+			left: -1000px;
+			top: -1000px;
+			word-wrap: break-word;
+			white-space: pre-line;
+		}
+	}
+}

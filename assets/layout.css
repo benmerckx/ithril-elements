@@ -1,4 +1,244 @@
-* {
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic');
+.ithril {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+.ithril a {
+  background-color: transparent;
+  cursor: pointer;
+}
+.ithril a:active,
+.ithril a:hover {
+  outline: 0;
+}
+.ithril button,
+.ithril input,
+.ithril optgroup,
+.ithril select,
+.ithril textarea {
+  color: inherit;
+  font: inherit;
   margin: 0;
+}
+.ithril button {
+  overflow: visible;
+}
+.ithril button,
+.ithril select {
+  text-transform: none;
+}
+.ithril button,
+.ithril html input[type="button"],
+.ithril input[type="reset"],
+.ithril input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+.ithril button[disabled],
+.ithril html input[disabled] {
+  cursor: default;
+}
+.ithril button::-moz-focus-inner,
+.ithril input::-moz-focus-inner {
+  border: 0;
   padding: 0;
+}
+.ithril input {
+  line-height: normal;
+}
+.ithril input[type="checkbox"],
+.ithril input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+.ithril input[type="number"]::-webkit-inner-spin-button,
+.ithril input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+.ithril *,
+.ithril *:before,
+.ithril *:after {
+  box-sizing: inherit;
+}
+.ithril .field,
+.ithril .field + .mirror {
+  display: inline-block;
+  vertical-align: middle;
+  appearance: none;
+  background: transparent;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-size: 15px;
+  color: #606c76;
+  width: 100%;
+  resize: none;
+  position: relative;
+  border: 1px solid #d1d1d1;
+}
+.ithril .field:focus,
+.ithril .field + .mirror:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #a4c6fd inset;
+}
+.ithril.checkbox label,
+.ithril.checkbox input {
+  cursor: pointer;
+}
+.ithril.dropdown {
+  position: relative;
+}
+.ithril.dropdown:focus {
+  outline: 0;
+}
+.ithril.dropdown.open > .main {
+  border-color: #a4c6fd;
+  border-bottom-color: transparent;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.ithril.dropdown > .main {
+  border: 1px solid #d1d1d1;
+  border-radius: 3px;
+}
+.ithril.dropdown > .main > .value {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.ithril.dropdown > .main > .text input {
+  border: none;
+}
+.ithril.dropdown > .main > .text input:focus {
+  box-shadow: none;
+}
+.ithril.dropdown > .main a.remove {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  height: 20px;
+  margin-top: -10px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+.ithril.dropdown > .option-list {
+  background: white;
+  max-height: 200px;
+  overflow: auto;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  border: 1px solid #d1d1d1;
+  border-color: #a4c6fd;
+  border-radius: 3px;
+  z-index: 9999999;
+  border-top-color: transparent;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: -1px;
+}
+.ithril.dropdown > .option-list.align-top {
+  top: auto;
+  bottom: 100%;
+  border-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top: 1px solid #a4c6fd;
+  border-bottom: none;
+  margin-top: 0;
+  margin-bottom: -1px;
+}
+.ithril.dropdown > .option-list.align-top + .main {
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom: 1px solid #a4c6fd;
+  border-top-color: transparent;
+}
+.ithril.dropdown > .option-list > .option {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  line-height: 1.428571429;
+  cursor: pointer;
+}
+.ithril.dropdown > .option-list > .option:hover {
+  background: #eee;
+}
+.ithril.dropdown ::-webkit-input-placeholder {
+  color: inherit;
+}
+.ithril.dropdown :-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+.ithril.dropdown ::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+.ithril.dropdown :-ms-input-placeholder {
+  color: inherit;
+}
+.ithril.dropdown :placeholder-shown {
+  color: inherit;
+}
+.ithril.tabs {
+  margin: 10px;
+  margin-top: 20px;
+  position: relative;
+}
+.ithril.tabs nav {
+  margin-top: 10px;
+}
+.ithril.tabs nav a {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  margin-right: 6px;
+  padding: 8px 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background: #fafafb;
+}
+.ithril.tabs nav a.active {
+  background: #f4f5f6;
+  color: #9b4dca;
+}
+.ithril.tabs .tab {
+  display: block;
+  width: 100%;
+  background: #f4f5f6;
+  padding: 5px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.ithril.text textarea.field {
+  overflow: hidden;
+  min-height: 60px;
+}
+.ithril.text textarea.field + .mirror {
+  visibility: hidden;
+  position: absolute;
+  left: -1000px;
+  top: -1000px;
+  word-wrap: break-word;
+  white-space: pre-line;
+}
+body {
+  max-width: 400px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  color: #606c76;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
 }

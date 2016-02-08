@@ -1,4 +1,4 @@
--lib ithril:1.0.3
+-lib ithril:1.0.7
 -cp src
 -cp web
 -main Web

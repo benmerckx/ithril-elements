@@ -1,0 +1,18 @@
+.field, .field+.mirror {
+	.inline(middle);
+	appearance: none;
+	background: transparent;
+	border-radius: 3px;
+	padding: 10px 15px;
+	font-size: 15px;
+	color: @color-2;
+	width: 100%;
+	resize: none;
+	position: relative;
+	border: 1px solid @color-4;
+
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 0px 2px #a4c6fd inset;
+	}
+}
