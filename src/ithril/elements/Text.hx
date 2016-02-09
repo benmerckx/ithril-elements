@@ -41,11 +41,26 @@ class Text extends Field<TextOptions, String> {
 	public function focus() el.focus();
 	@:keep
 	public function blur() el.blur();
+	
+	function key(e) {
+		switch e.keyCode {
+			case 13:
+				dispatch(Confirm, cast e);
+			default:
+		}
+	}
 
 	public function view() [
 		(div.ithril.text)
 			($if (state.multiline))
-				(textarea.field (placeholder=state.placeholder, required = state.required, config=config) (events) > value)
+				(textarea.field 
+					(
+						placeholder=state.placeholder, 
+						required = state.required, 
+						config=config
+					) 
+					(events) > value
+				)
 				(div.mirror (config = mirror) > value+"\n")
 			($else)
 				(input.field 
@@ -54,7 +69,8 @@ class Text extends Field<TextOptions, String> {
 						placeholder=state.placeholder, 
 						required=state.required, 
 						value=value,
-						config=config
+						config=config,
+						onkeyup=key
 					) 
 					(events)
 				)

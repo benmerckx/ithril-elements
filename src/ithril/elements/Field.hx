@@ -10,6 +10,7 @@ enum FieldEventType {
 	Input;
 	Focus;
 	Blur;
+	Confirm;
 }
 
 typedef FieldEvent<F> = {
@@ -24,7 +25,8 @@ typedef FieldEvents<F> = {
 	?onchange: FieldEventListener<F>,
 	?oninput: FieldEventListener<F>,
 	?onfocus: FieldEventListener<F>,
-	?onblur: FieldEventListener<F>
+	?onblur: FieldEventListener<F>,
+	?onconfirm: FieldEventListener<F>
 }
 
 typedef FieldOptions<F, D> = {
@@ -52,6 +54,7 @@ class Field<Options: FieldOptions<Dynamic, Data>, Data> extends Component<Option
 			case Input: state.oninput;
 			case Focus: state.onfocus;
 			case Blur: state.onblur;
+			case Confirm: state.onconfirm;
 		};
 		if (method != null)
 			method({type: FieldEventType.Change, field: this, originalEvent: originalEvent});
@@ -68,7 +71,8 @@ class Field<Options: FieldOptions<Dynamic, Data>, Data> extends Component<Option
 				dispatch(Input, e);
 			},
 			onfocus: dispatch.bind(Focus, _),
-			onblur: dispatch.bind(Blur, _)
+			onblur: dispatch.bind(Blur, _),
+			onconfirm: dispatch.bind(Confirm, _)
 		};
 	}
 

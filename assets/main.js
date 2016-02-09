@@ -67,6 +67,7 @@ ithril_ComponentAbstract.prototype = {
 	,__class__: ithril_ComponentAbstract
 };
 var Web = function() {
+	this.selected = ["United States","Russia","China"];
 	this.countries = ["Afghanistan","Åland Islands","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antigua and Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bangladesh","Barbados","Bahamas","Bahrain","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","British Indian Ocean Territory","British Virgin Islands","Brunei Darussalam","Bulgaria","Burkina Faso","Burma","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo-Brazzaville","Congo-Kinshasa","Cook Islands","Costa Rica","Croatia","Curaçao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","East Timor","Ecuador","El Salvador","Egypt","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Federated States of Micronesia","Fiji","Finland","France","French Guiana","French Polynesia","French Southern Lands","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard and McDonald Islands","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn Islands","Poland","Portugal","Puerto Rico","Qatar","Réunion","Romania","Russia","Rwanda","Saint Barthélemy","Saint Helena","Saint Kitts and Nevis","Saint Lucia","Saint Martin","Saint Pierre and Miquelon","Saint Vincent","Samoa","San Marino","São Tomé and Príncipe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia","South Korea","Spain","Sri Lanka","Sudan","Suriname","Svalbard and Jan Mayen","Sweden","Swaziland","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Vietnam","Venezuela","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe"];
 	ithril_ComponentAbstract.call(this);
 };
@@ -80,117 +81,148 @@ Web.prototype = $extend(ithril_ComponentAbstract.prototype,{
 		return [{ tag : "title", attrs : { }, children : ["Ithril Elements"]},{ tag : "meta", attrs : { charset : "utf-8"}, children : []},{ tag : "meta", attrs : { content : "width=device-width, initial-scale=1.0", name : "viewport"}, children : []},{ tag : "link", attrs : { rel : "stylesheet", href : "assets/layout.css"}, children : []},{ tag : "body", attrs : { }, children : [this.body()]}];
 	}
 	,body: function() {
+		var _g1 = this;
 		var tmp;
-		var tmp9;
-		var children1 = ["Tab 1 content"];
-		var tmp12 = ithril_component_ComponentCache.getComponent_ithril_elements_Tab("cd35e3fc19c83f4f0ca28f34487b61a3",ithril_elements_Tab,children1,ithril_Attributes.attrs("Tab 1"));
-		tmp12.setChildren(children1);
-		tmp12.setState(ithril_Attributes.attrs("Tab 1"));
-		tmp9 = tmp12;
 		var tmp10;
-		var children2 = ["Tab 2 content"];
-		var tmp13 = ithril_component_ComponentCache.getComponent_ithril_elements_Tab("a94700b6a96a970b681a7b4884649b27",ithril_elements_Tab,children2,ithril_Attributes.attrs("Tab 2"));
-		tmp13.setChildren(children2);
-		tmp13.setState(ithril_Attributes.attrs("Tab 2"));
+		var children1 = ["Tab 1 content"];
+		var tmp13 = ithril_component_ComponentCache.getComponent_ithril_elements_Tab("b18b105260432f48148c9fcf48a9d2b2",ithril_elements_Tab,children1,ithril_Attributes.attrs("Tab 1"));
+		tmp13.setChildren(children1);
+		tmp13.setState(ithril_Attributes.attrs("Tab 1"));
 		tmp10 = tmp13;
-		var children = [tmp9,tmp10];
-		var tmp11 = ithril_component_ComponentCache.getComponent_ithril_elements_Tabs("09fdaaab7df8e833000d8440dd15e77c",ithril_elements_Tabs,children,{ });
-		tmp11.setChildren(children);
-		tmp11.setState({ });
-		tmp = tmp11;
+		var tmp11;
+		var children2 = ["Tab 2 content"];
+		var tmp14 = ithril_component_ComponentCache.getComponent_ithril_elements_Tab("55c9d56eb5b2aa70fadfc161a6adcd46",ithril_elements_Tab,children2,ithril_Attributes.attrs("Tab 2"));
+		tmp14.setChildren(children2);
+		tmp14.setState(ithril_Attributes.attrs("Tab 2"));
+		tmp11 = tmp14;
+		var children = [tmp10,tmp11];
+		var tmp12 = ithril_component_ComponentCache.getComponent_ithril_elements_Tabs("c3d4ff92cc9c59bb0d25519a0a5eff5e",ithril_elements_Tabs,children,{ });
+		tmp12.setChildren(children);
+		tmp12.setState({ });
+		tmp = tmp12;
 		var tmp1;
 		var children3 = [];
-		var tmp14 = ithril_component_ComponentCache.getComponent_ithril_elements_Text("22159142f138a885436ddecf66bcc93f",ithril_elements_Text,children3,{ });
-		tmp14.setChildren(children3);
-		tmp14.setState({ });
-		tmp1 = tmp14;
+		var tmp15 = ithril_component_ComponentCache.getComponent_ithril_elements_Text("885cc3cc0f3fe43375fe4b6b491dc93b",ithril_elements_Text,children3,{ });
+		tmp15.setChildren(children3);
+		tmp15.setState({ });
+		tmp1 = tmp15;
 		var tmp2;
 		var children4 = [];
-		var tmp15 = ithril_component_ComponentCache.getComponent_ithril_elements_Text("332fabd71a8470736b5d0fe23bcb5696",ithril_elements_Text,children4,{ multiline : true});
-		tmp15.setChildren(children4);
-		tmp15.setState({ multiline : true});
-		tmp2 = tmp15;
+		var tmp16 = ithril_component_ComponentCache.getComponent_ithril_elements_Text("f243afc3700c66e1fd19794abb818b27",ithril_elements_Text,children4,{ multiline : true});
+		tmp16.setChildren(children4);
+		tmp16.setState({ multiline : true});
+		tmp2 = tmp16;
 		var tmp3;
 		var children5 = [];
-		var tmp16 = ithril_component_ComponentCache.getComponent_ithril_elements_Checkbox("186873e529ac56d53efc8d098c7bb912",ithril_elements_Checkbox,children5,{ label : "Checkbox"});
-		tmp16.setChildren(children5);
-		tmp16.setState({ label : "Checkbox"});
-		tmp3 = tmp16;
+		var tmp17 = ithril_component_ComponentCache.getComponent_ithril_elements_Checkbox("a310d15535bb88841007973c4abc42c7",ithril_elements_Checkbox,children5,{ label : "Checkbox"});
+		tmp17.setChildren(children5);
+		tmp17.setState({ label : "Checkbox"});
+		tmp3 = tmp17;
 		var tmp4;
 		var children6 = [];
-		var tmp17;
+		var tmp18;
 		var _g = new haxe_ds_StringMap();
-		var _g1 = 0;
+		var _g11 = 0;
 		var _g2 = this.countries;
-		while(_g1 < _g2.length) {
-			var country = _g2[_g1];
-			++_g1;
+		while(_g11 < _g2.length) {
+			var country = _g2[_g11];
+			++_g11;
 			if(__map_reserved[country] != null) _g.setReserved(country,country); else _g.h[country] = country;
 		}
-		tmp17 = _g;
-		var tmp18 = ithril_component_ComponentCache.getComponent_ithril_elements_Dropdown("7082d1c18305f38a59a64fc1a3b81566",ithril_elements_Dropdown,children6,{ options : tmp17});
-		tmp18.setChildren(children6);
-		var tmp19;
-		var _g11 = new haxe_ds_StringMap();
+		tmp18 = _g;
+		var tmp19 = ithril_component_ComponentCache.getComponent_ithril_elements_Dropdown("ab335cbedb19fb1a72f19576bf86787a",ithril_elements_Dropdown,children6,{ options : tmp18});
+		tmp19.setChildren(children6);
+		var tmp20;
+		var _g12 = new haxe_ds_StringMap();
 		var _g21 = 0;
 		var _g3 = this.countries;
 		while(_g21 < _g3.length) {
 			var country1 = _g3[_g21];
 			++_g21;
-			if(__map_reserved[country1] != null) _g11.setReserved(country1,country1); else _g11.h[country1] = country1;
+			if(__map_reserved[country1] != null) _g12.setReserved(country1,country1); else _g12.h[country1] = country1;
 		}
-		tmp19 = _g11;
-		tmp18.setState({ options : tmp19});
-		tmp4 = tmp18;
+		tmp20 = _g12;
+		tmp19.setState({ options : tmp20});
+		tmp4 = tmp19;
 		var tmp5;
 		var children7 = [];
-		var tmp20;
+		var tmp21;
 		var _g4 = new haxe_ds_StringMap();
-		var _g12 = 0;
+		var _g13 = 0;
 		var _g22 = this.countries;
-		while(_g12 < _g22.length) {
-			var country2 = _g22[_g12];
-			++_g12;
+		while(_g13 < _g22.length) {
+			var country2 = _g22[_g13];
+			++_g13;
 			if(__map_reserved[country2] != null) _g4.setReserved(country2,country2); else _g4.h[country2] = country2;
 		}
-		tmp20 = _g4;
-		var tmp21 = ithril_component_ComponentCache.getComponent_ithril_elements_Dropdown("daf2a288c34860c2c91bb66e2e3ba95d",ithril_elements_Dropdown,children7,{ searchable : true, options : tmp20});
-		tmp21.setChildren(children7);
-		var tmp22;
-		var _g13 = new haxe_ds_StringMap();
+		tmp21 = _g4;
+		var tmp22 = ithril_component_ComponentCache.getComponent_ithril_elements_Dropdown("c5506bf9731f1fceeffee2423f4e5bc0",ithril_elements_Dropdown,children7,{ searchable : true, options : tmp21});
+		tmp22.setChildren(children7);
+		var tmp23;
+		var _g14 = new haxe_ds_StringMap();
 		var _g23 = 0;
 		var _g31 = this.countries;
 		while(_g23 < _g31.length) {
 			var country3 = _g31[_g23];
 			++_g23;
-			if(__map_reserved[country3] != null) _g13.setReserved(country3,country3); else _g13.h[country3] = country3;
+			if(__map_reserved[country3] != null) _g14.setReserved(country3,country3); else _g14.h[country3] = country3;
 		}
-		tmp22 = _g13;
-		tmp21.setState({ searchable : true, options : tmp22});
-		tmp5 = tmp21;
+		tmp23 = _g14;
+		tmp22.setState({ searchable : true, options : tmp23});
+		tmp5 = tmp22;
 		var tmp6;
 		var children8 = ["One"];
-		var tmp23 = ithril_component_ComponentCache.getComponent_ithril_elements_Chip("1cfecc41152c311f02047f6fd478043b",ithril_elements_Chip,children8,{ onremove : function() {
+		var tmp24 = ithril_component_ComponentCache.getComponent_ithril_elements_Chip("f1212820840368d6be7b4623cf6d2873",ithril_elements_Chip,children8,{ onremove : function() {
 			console.log("remove");
 		}});
-		tmp23.setChildren(children8);
-		tmp23.setState({ onremove : function() {
+		tmp24.setChildren(children8);
+		tmp24.setState({ onremove : function() {
 			console.log("remove");
 		}});
-		tmp6 = tmp23;
+		tmp6 = tmp24;
 		var tmp7;
 		var children9 = ["Two"];
-		var tmp24 = ithril_component_ComponentCache.getComponent_ithril_elements_Chip("675a7f26a893a8d047da9d5cbfbdd3db",ithril_elements_Chip,children9,{ });
-		tmp24.setChildren(children9);
-		tmp24.setState({ });
-		tmp7 = tmp24;
-		var tmp8;
-		var children10 = ["Three"];
-		var tmp25 = ithril_component_ComponentCache.getComponent_ithril_elements_Chip("6672f3c8a39d6d6561d1e60a6e65118b",ithril_elements_Chip,children10,{ });
-		tmp25.setChildren(children10);
+		var tmp25 = ithril_component_ComponentCache.getComponent_ithril_elements_Chip("381f118ea4ec579a46dbe8e96ac34696",ithril_elements_Chip,children9,{ });
+		tmp25.setChildren(children9);
 		tmp25.setState({ });
-		tmp8 = tmp25;
-		return [{ tag : "h1", attrs : { }, children : ["Tabs"]},{ tag : "div", attrs : { }, children : [tmp]},{ tag : "h1", attrs : { }, children : ["Text"]},{ tag : "h2", attrs : { }, children : ["Single line"]},tmp1,{ tag : "h2", attrs : { }, children : ["Multiline"]},tmp2,{ tag : "h1", attrs : { }, children : ["Checkbox"]},tmp3,{ tag : "h1", attrs : { }, children : ["Dropdown"]},{ tag : "h2", attrs : { }, children : ["Default"]},tmp4,{ tag : "h2", attrs : { }, children : ["Searchable"]},tmp5,{ tag : "h1", attrs : { }, children : ["Chips"]},tmp6,tmp7,tmp8];
+		tmp7 = tmp25;
+		var tmp8;
+		var children10 = ["Three ",{ tag : "em", attrs : { }, children : ["(any html)"]}];
+		var tmp26 = ithril_component_ComponentCache.getComponent_ithril_elements_Chip("e33a122629a88921ea82020cffd0c364",ithril_elements_Chip,children10,{ });
+		tmp26.setChildren(children10);
+		tmp26.setState({ });
+		tmp8 = tmp26;
+		var tmp9;
+		var children11 = [];
+		var tmp27;
+		var _g5 = new haxe_ds_StringMap();
+		var _g15 = 0;
+		var _g24 = this.countries;
+		while(_g15 < _g24.length) {
+			var country4 = _g24[_g15];
+			++_g15;
+			if(__map_reserved[country4] != null) _g5.setReserved(country4,country4); else _g5.h[country4] = country4;
+		}
+		tmp27 = _g5;
+		var tmp28 = ithril_component_ComponentCache.getComponent_ithril_elements_Select("ff666e46060f1685b89095e8d3920f1d",ithril_elements_Select,children11,{ value : this.selected, options : tmp27, onchange : function(e) {
+			_g1.selected = e.field.value;
+		}, canAdd : true});
+		tmp28.setChildren(children11);
+		var tmp29;
+		var _g16 = new haxe_ds_StringMap();
+		var _g25 = 0;
+		var _g32 = this.countries;
+		while(_g25 < _g32.length) {
+			var country5 = _g32[_g25];
+			++_g25;
+			if(__map_reserved[country5] != null) _g16.setReserved(country5,country5); else _g16.h[country5] = country5;
+		}
+		tmp29 = _g16;
+		tmp28.setState({ value : this.selected, options : tmp29, onchange : function(e1) {
+			_g1.selected = e1.field.get_value();
+		}, canAdd : true});
+		tmp9 = tmp28;
+		return [{ tag : "h1", attrs : { }, children : ["Tabs"]},{ tag : "div", attrs : { }, children : [tmp]},{ tag : "h1", attrs : { }, children : ["Text"]},{ tag : "h2", attrs : { }, children : ["Single line"]},tmp1,{ tag : "h2", attrs : { }, children : ["Multiline"]},tmp2,{ tag : "h1", attrs : { }, children : ["Checkbox"]},tmp3,{ tag : "h1", attrs : { }, children : ["Dropdown"]},{ tag : "h2", attrs : { }, children : ["Default"]},tmp4,{ tag : "h2", attrs : { }, children : ["Searchable"]},tmp5,{ tag : "h1", attrs : { }, children : ["Chips"]},tmp6,tmp7,tmp8,{ tag : "h1", attrs : { }, children : ["Select"]},tmp9];
 	}
 	,__class__: Web
 });
@@ -309,6 +341,11 @@ ithril_component_ComponentCache.getComponent_ithril_elements_OptionList__ = func
 ithril_component_ComponentCache.getComponent_ithril_elements_Option__ = function(key,type,children,state) {
 	return ithril_component_ComponentCache.getInstance(key,children,state,function() {
 		return new ithril_elements_Option();
+	});
+};
+ithril_component_ComponentCache.getComponent_ithril_elements_Select = function(key,type,children,state) {
+	return ithril_component_ComponentCache.getInstance(key,children,state,function() {
+		return new ithril_elements_Select();
 	});
 };
 ithril_component_ComponentCache.getComponent_ithril_elements_Chip = function(key,type,children,state) {
@@ -435,6 +472,9 @@ ithril_elements_Field.prototype = $extend(ithril_ComponentAbstract.prototype,{
 		case 3:
 			tmp = this.state.onblur;
 			break;
+		case 4:
+			tmp = this.state.onconfirm;
+			break;
 		}
 		var method = tmp;
 		if(method != null) method({ type : ithril_elements_FieldEventType.Change, field : this, originalEvent : originalEvent});
@@ -459,6 +499,13 @@ ithril_elements_Field.prototype = $extend(ithril_ComponentAbstract.prototype,{
 			var f1 = $bind($this,$this.dispatch);
 			$r = function(a11) {
 				f1(ithril_elements_FieldEventType.Blur,a11);
+			};
+			return $r;
+		}(this)), onconfirm : (function($this) {
+			var $r;
+			var f2 = $bind($this,$this.dispatch);
+			$r = function(a12) {
+				f2(ithril_elements_FieldEventType.Confirm,a12);
 			};
 			return $r;
 		}(this))};
@@ -590,7 +637,7 @@ ithril_elements_Dropdown.prototype = $extend(ithril_elements_Field.prototype,{
 				var _this = this.state.options;
 				if(__map_reserved[key] != null) tmp7 = _this.getReserved(key); else tmp7 = _this.h[key];
 				var children1 = [tmp7];
-				var tmp8 = ithril_component_ComponentCache.getComponent_ithril_elements_Option__("7632bcb271ab3ae9aa4184ecaa37f767",ithril_elements_Option,children1,{ key : key});
+				var tmp8 = ithril_component_ComponentCache.getComponent_ithril_elements_Option__("a791cefb61aad5487cdd5ebe3befafb1",ithril_elements_Option,children1,{ key : key});
 				tmp8.setChildren(children1);
 				tmp8.setState({ key : key});
 				tmp6 = tmp8;
@@ -598,11 +645,11 @@ ithril_elements_Dropdown.prototype = $extend(ithril_elements_Field.prototype,{
 			}
 			tmp4 = _g;
 			var children = tmp4;
-			var tmp5 = ithril_component_ComponentCache.getComponent_ithril_elements_OptionList__("f32a697b076ef64eea3a0979bc0ae778",ithril_elements_OptionList,children,{ filter : this.query != null?$bind(this,this.filter):null, height : 40, onchange : function(e) {
+			var tmp5 = ithril_component_ComponentCache.getComponent_ithril_elements_OptionList__("bf2e76ee6add6512e5eccf85bbee800e",ithril_elements_OptionList,children,{ filter : this.query != null?$bind(this,this.filter):null, onchange : function(e) {
 				_g1.select(e.field.value);
 			}});
 			tmp5.setChildren(children);
-			tmp5.setState({ filter : this.query != null?$bind(this,this.filter):null, height : 40, onchange : function(e1) {
+			tmp5.setState({ filter : this.query != null?$bind(this,this.filter):null, onchange : function(e1) {
 				_g1.select(e1.field.get_value());
 			}});
 			tmp3 = tmp5;
@@ -628,7 +675,7 @@ ithril_elements_Dropdown.prototype = $extend(ithril_elements_Field.prototype,{
 				var _this1 = this.state.options;
 				if(__map_reserved[key1] != null) tmp12 = _this1.getReserved(key1); else tmp12 = _this1.h[key1];
 			}
-			var tmp13 = ithril_component_ComponentCache.getComponent_ithril_elements_Text("85a67ef8f73e94069331226f02641b95",ithril_elements_Text,children2,{ onfocus : tmp10, onblur : tmp11, oninput : function(e2) {
+			var tmp13 = ithril_component_ComponentCache.getComponent_ithril_elements_Text("055265e0fabd3d409474b6346fef8b29",ithril_elements_Text,children2,{ onfocus : tmp10, onblur : tmp11, oninput : function(e2) {
 				_g1.query = e2.field.value;
 			}, value : this.query, placeholder : tmp12});
 			tmp13.setChildren(children2);
@@ -677,7 +724,7 @@ ithril_elements_Dropdown.prototype = $extend(ithril_elements_Field.prototype,{
 	}
 	,__class__: ithril_elements_Dropdown
 });
-var ithril_elements_FieldEventType = { __ename__ : true, __constructs__ : ["Change","Input","Focus","Blur"] };
+var ithril_elements_FieldEventType = { __ename__ : true, __constructs__ : ["Change","Input","Focus","Blur","Confirm"] };
 ithril_elements_FieldEventType.Change = ["Change",0];
 ithril_elements_FieldEventType.Change.toString = $estr;
 ithril_elements_FieldEventType.Change.__enum__ = ithril_elements_FieldEventType;
@@ -690,6 +737,9 @@ ithril_elements_FieldEventType.Focus.__enum__ = ithril_elements_FieldEventType;
 ithril_elements_FieldEventType.Blur = ["Blur",3];
 ithril_elements_FieldEventType.Blur.toString = $estr;
 ithril_elements_FieldEventType.Blur.__enum__ = ithril_elements_FieldEventType;
+ithril_elements_FieldEventType.Confirm = ["Confirm",4];
+ithril_elements_FieldEventType.Confirm.toString = $estr;
+ithril_elements_FieldEventType.Confirm.__enum__ = ithril_elements_FieldEventType;
 var ithril_elements_Option = function() {
 	ithril_ComponentAbstract.call(this);
 };
@@ -753,6 +803,163 @@ ithril_elements_OptionList.prototype = $extend(ithril_elements_Field.prototype,{
 		return { tag : "div", attrs : { config : $bind(this,this.config), 'class' : "ithril option-list"}, children : tmp};
 	}
 	,__class__: ithril_elements_OptionList
+});
+var ithril_elements_Select = function() {
+	this.focusEl = null;
+	this.show = false;
+	this.query = null;
+	ithril_elements_Field.call(this);
+};
+ithril_elements_Select.__name__ = true;
+ithril_elements_Select.__super__ = ithril_elements_Field;
+ithril_elements_Select.prototype = $extend(ithril_elements_Field.prototype,{
+	mount: function() {
+		ithril_elements_Field.prototype.mount.call(this);
+		this.setState({ canAdd : false, options : new haxe_ds_StringMap(), placeholder : "Add…"});
+		this.set_value([]);
+	}
+	,open: function(show) {
+		this.show = show == null?!this.show:show;
+		this.dispatch(this.show?ithril_elements_FieldEventType.Focus:ithril_elements_FieldEventType.Blur);
+		if(this.show) this.focusEl.focus(); else {
+			this.focusEl.blur();
+			this.query = null;
+		}
+	}
+	,focusChange: function(show,e) {
+		this.open(show);
+	}
+	,add: function(key) {
+		this.get_value().push(key);
+		this.query = null;
+		this.open(false);
+		this.dispatch(ithril_elements_FieldEventType.Change);
+	}
+	,filter: function(key) {
+		var tmp;
+		var _this = this.state.options;
+		if(__map_reserved[key] != null) tmp = _this.getReserved(key); else tmp = _this.h[key];
+		var option = tmp.toLowerCase();
+		return option.indexOf(this.query.toLowerCase()) > -1;
+	}
+	,confirm: function(e) {
+		this.add(e.field.get_value());
+		this.focusEl.focus();
+	}
+	,remove: function(key) {
+		this.set_value(this.get_value().filter(function(k) {
+			return key != k;
+		}));
+		this.dispatch(ithril_elements_FieldEventType.Change);
+	}
+	,view: function() {
+		var _g1 = this;
+		var tmp;
+		if(this.state.options != null && this.show) {
+			var tmp3;
+			var tmp4;
+			var _g = [];
+			var $it0 = this.state.options.keys();
+			while( $it0.hasNext() ) {
+				var key = $it0.next();
+				var tmp6;
+				var tmp7;
+				var _this = this.state.options;
+				if(__map_reserved[key] != null) tmp7 = _this.getReserved(key); else tmp7 = _this.h[key];
+				var children1 = [tmp7];
+				var tmp8 = ithril_component_ComponentCache.getComponent_ithril_elements_Option__("7eb6b9a33c927cab54e9203a791cd2b2",ithril_elements_Option,children1,{ key : key});
+				tmp8.setChildren(children1);
+				tmp8.setState({ key : key});
+				tmp6 = tmp8;
+				_g.push(tmp6);
+			}
+			tmp4 = _g;
+			var children = tmp4;
+			var tmp5 = ithril_component_ComponentCache.getComponent_ithril_elements_OptionList__("ee12d142ea5dc161601c50bbb1d565a5",ithril_elements_OptionList,children,{ filter : this.query != null?$bind(this,this.filter):null, onchange : function(e) {
+				_g1.add(e.field.value);
+			}});
+			tmp5.setChildren(children);
+			tmp5.setState({ filter : this.query != null?$bind(this,this.filter):null, onchange : function(e1) {
+				_g1.add(e1.field.get_value());
+			}});
+			tmp3 = tmp5;
+			tmp = [tmp3];
+		} else tmp = null;
+		var tmp1;
+		var _g2 = [];
+		var _g11 = 0;
+		var _g21 = this.get_value();
+		while(_g11 < _g21.length) {
+			var key1 = _g21[_g11];
+			++_g11;
+			var tmp9;
+			var tmp10;
+			var _this1 = this.state.options;
+			if(__map_reserved[key1] != null) tmp10 = _this1.existsReserved(key1); else tmp10 = _this1.h.hasOwnProperty(key1);
+			var tmp11;
+			if(tmp10) {
+				var tmp15;
+				var _this2 = this.state.options;
+				if(__map_reserved[key1] != null) tmp15 = _this2.getReserved(key1); else tmp15 = _this2.h[key1];
+				tmp11 = tmp15;
+			} else tmp11 = key1;
+			var children2 = [tmp11];
+			var tmp12;
+			var f = [$bind(this,this.remove)];
+			var a1 = [key1];
+			tmp12 = (function(a1,f) {
+				return function() {
+					f[0](a1[0]);
+				};
+			})(a1,f);
+			var tmp13 = ithril_component_ComponentCache.getComponent_ithril_elements_Chip("dae128aea8d90eefc9c76a74041fc9a7",ithril_elements_Chip,children2,{ onremove : tmp12});
+			tmp13.setChildren(children2);
+			var tmp14;
+			var f1 = [$bind(this,this.remove)];
+			var a11 = [key1];
+			tmp14 = (function(a11,f1) {
+				return function() {
+					f1[0](a11[0]);
+				};
+			})(a11,f1);
+			tmp13.setState({ onremove : tmp14});
+			tmp9 = tmp13;
+			_g2.push(tmp9);
+		}
+		tmp1 = _g2;
+		var tmp2;
+		var children3 = [];
+		var tmp16;
+		var f2 = $bind(this,this.focusChange);
+		tmp16 = function(e3) {
+			f2(true,e3);
+		};
+		var tmp17;
+		var f3 = $bind(this,this.focusChange);
+		tmp17 = function(e4) {
+			f3(false,e4);
+		};
+		var tmp18 = ithril_component_ComponentCache.getComponent_ithril_elements_Text("6e7c69f497f1fc2887503ae1716490d8",ithril_elements_Text,children3,{ onfocus : tmp16, onblur : tmp17, oninput : function(e2) {
+			_g1.query = e2.field.value;
+		}, value : this.query, placeholder : this.state.placeholder, onconfirm : $bind(this,this.confirm)});
+		tmp18.setChildren(children3);
+		var tmp19;
+		var f4 = $bind(this,this.focusChange);
+		tmp19 = function(e5) {
+			f4(true,e5);
+		};
+		var tmp20;
+		var f5 = $bind(this,this.focusChange);
+		tmp20 = function(e6) {
+			f5(false,e6);
+		};
+		tmp18.setState({ onfocus : tmp19, onblur : tmp20, oninput : function(e7) {
+			_g1.query = e7.field.get_value();
+		}, value : this.query, placeholder : this.state.placeholder, onconfirm : $bind(this,this.confirm)});
+		tmp2 = tmp18;
+		return { tag : "div", attrs : { 'class' : ithril_Attributes.combineClassNames(this.show?"open":"","ithril select")}, children : [tmp,{ tag : "div", attrs : { 'class' : "main"}, children : [{ tag : "div", attrs : { 'class' : "chips"}, children : tmp1},this.focusEl = tmp2]}]};
+	}
+	,__class__: ithril_elements_Select
 });
 var ithril_elements_Tab = function() {
 	ithril_ComponentAbstract.call(this);
@@ -842,8 +1049,17 @@ ithril_elements_Text.prototype = $extend(ithril_elements_Field.prototype,{
 	,blur: function() {
 		this.el.blur();
 	}
+	,key: function(e) {
+		var _g = e.keyCode;
+		switch(_g) {
+		case 13:
+			this.dispatch(ithril_elements_FieldEventType.Confirm,e);
+			break;
+		default:
+		}
+	}
 	,view: function() {
-		return { tag : "div", attrs : { 'class' : "ithril text"}, children : [this.state.multiline?[{ tag : "textarea", attrs : ithril_Attributes.combine({ 'class' : "field"},ithril_Attributes.combine({ placeholder : this.state.placeholder, required : this.state.required, config : $bind(this,this.config)},ithril_Attributes.attrs($bind(this,this.events)))), children : [this.get_value()]},{ tag : "div", attrs : { config : $bind(this,this.mirror), 'class' : "mirror"}, children : [this.get_value() + "\n"]}]:[{ tag : "input", attrs : ithril_Attributes.combine({ 'class' : "field"},ithril_Attributes.combine({ tabindex : "" + this.state.tabindex, placeholder : this.state.placeholder, required : this.state.required, value : this.get_value(), config : $bind(this,this.config)},ithril_Attributes.attrs($bind(this,this.events)))), children : []}]]};
+		return { tag : "div", attrs : { 'class' : "ithril text"}, children : [this.state.multiline?[{ tag : "textarea", attrs : ithril_Attributes.combine({ 'class' : "field"},ithril_Attributes.combine({ placeholder : this.state.placeholder, required : this.state.required, config : $bind(this,this.config)},ithril_Attributes.attrs($bind(this,this.events)))), children : [this.get_value()]},{ tag : "div", attrs : { config : $bind(this,this.mirror), 'class' : "mirror"}, children : [this.get_value() + "\n"]}]:[{ tag : "input", attrs : ithril_Attributes.combine({ 'class' : "field"},ithril_Attributes.combine({ tabindex : "" + this.state.tabindex, placeholder : this.state.placeholder, required : this.state.required, value : this.get_value(), config : $bind(this,this.config), onkeyup : $bind(this,this.key)},ithril_Attributes.attrs($bind(this,this.events)))), children : []}]]};
 	}
 	,__class__: ithril_elements_Text
 });

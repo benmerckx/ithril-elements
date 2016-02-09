@@ -5,7 +5,6 @@ import ithril.elements.Field;
 
 typedef OptionListOptions<K> = {
 	>FieldOptions<OptionList<K>, K>,
-	height: Int,
 	?filter: K -> Bool
 }
 

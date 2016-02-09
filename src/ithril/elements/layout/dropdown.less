@@ -1,4 +1,4 @@
-&.dropdown {
+&.dropdown, &.select {
 	position: relative;
 	
 	&:focus {
@@ -32,7 +32,7 @@
 			}
 		}
 		
-		a.remove {
+		>a.remove {
 			position: absolute;
 			top: 50%;
 			right: 5px;
@@ -42,55 +42,6 @@
 			line-height: 20px;
 			font-weight: bold;
 			padding: 0 10px;
-		}
-	}
-	
-	>.option-list {
-		background: white;
-		max-height: 200px;
-		overflow: auto;
-		position: absolute;
-		top: 100%;
-		width: 100%;
-		border: 1px solid @color-4;
-		border-color: @color-1;
-		border-radius: 3px;
-		z-index: 9999999;
-		border-top-color: transparent;
-		border-top-left-radius: 0;
-		border-top-right-radius: 0;
-		margin-top: -1px;
-		
-		&.align-top {
-			top: auto;
-			bottom: 100%;
-			border-radius: 3px;
-			border-bottom-left-radius: 0;
-			border-bottom-right-radius: 0;
-			border-top: 1px solid @color-1;
-			border-bottom: none;
-			margin-top: 0;
-			margin-bottom: -1px;
-			
-			+.main {
-				border-radius: 3px;
-				border-top-left-radius: 0;
-				border-top-right-radius: 0;
-				border-bottom: 1px solid @color-1;
-				border-top-color: transparent;
-			}
-		}
-		
-		>.option {
-			width: 100%;
-			padding: 10px 14px;
-			font-size: 15px;
-			line-height: 1.428571429;
-			cursor: pointer;
-			
-			&:hover {
-				background: #eee;
-			}
 		}
 	}
 	

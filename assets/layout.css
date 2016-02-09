@@ -88,46 +88,7 @@
 .ithril.checkbox input {
   margin-right: 15px;
 }
-.ithril.dropdown {
-  position: relative;
-}
-.ithril.dropdown:focus {
-  outline: 0;
-}
-.ithril.dropdown.open > .main {
-  border-color: #9b4dca;
-  border-bottom-color: transparent;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.ithril.dropdown > .main {
-  border: 1px solid #d1d1d1;
-  border-radius: 3px;
-}
-.ithril.dropdown > .main > .value {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  padding: 10px 15px;
-}
-.ithril.dropdown > .main > .text input {
-  border: none;
-}
-.ithril.dropdown > .main > .text input:focus {
-  box-shadow: none;
-}
-.ithril.dropdown > .main a.remove {
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  height: 20px;
-  margin-top: -10px;
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: bold;
-  padding: 0 10px;
-}
-.ithril.dropdown > .option-list {
+.ithril .option-list {
   background: white;
   max-height: 200px;
   overflow: auto;
@@ -143,7 +104,7 @@
   border-top-right-radius: 0;
   margin-top: -1px;
 }
-.ithril.dropdown > .option-list.align-top {
+.ithril .option-list.align-top {
   top: auto;
   bottom: 100%;
   border-radius: 3px;
@@ -154,39 +115,94 @@
   margin-top: 0;
   margin-bottom: -1px;
 }
-.ithril.dropdown > .option-list.align-top + .main {
+.ithril .option-list.align-top + div.main {
   border-radius: 3px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom: 1px solid #9b4dca;
   border-top-color: transparent;
 }
-.ithril.dropdown > .option-list > .option {
+.ithril .option-list > .option {
   width: 100%;
   padding: 10px 14px;
   font-size: 15px;
   line-height: 1.428571429;
   cursor: pointer;
 }
-.ithril.dropdown > .option-list > .option:hover {
+.ithril .option-list > .option:hover {
   background: #eee;
 }
-.ithril.dropdown ::-webkit-input-placeholder {
+.ithril.dropdown,
+.ithril.select {
+  position: relative;
+}
+.ithril.dropdown:focus,
+.ithril.select:focus {
+  outline: 0;
+}
+.ithril.dropdown.open > .main,
+.ithril.select.open > .main {
+  border-color: #9b4dca;
+  border-bottom-color: transparent;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.ithril.dropdown > .main,
+.ithril.select > .main {
+  border: 1px solid #d1d1d1;
+  border-radius: 3px;
+}
+.ithril.dropdown > .main > .value,
+.ithril.select > .main > .value {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.ithril.dropdown > .main > .text input,
+.ithril.select > .main > .text input {
+  border: none;
+}
+.ithril.dropdown > .main > .text input:focus,
+.ithril.select > .main > .text input:focus {
+  box-shadow: none;
+}
+.ithril.dropdown > .main > a.remove,
+.ithril.select > .main > a.remove {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  height: 20px;
+  margin-top: -10px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+.ithril.dropdown ::-webkit-input-placeholder,
+.ithril.select ::-webkit-input-placeholder {
   color: inherit;
 }
-.ithril.dropdown :-moz-placeholder {
+.ithril.dropdown :-moz-placeholder,
+.ithril.select :-moz-placeholder {
   color: inherit;
   opacity: 1;
 }
-.ithril.dropdown ::-moz-placeholder {
+.ithril.dropdown ::-moz-placeholder,
+.ithril.select ::-moz-placeholder {
   color: inherit;
   opacity: 1;
 }
-.ithril.dropdown :-ms-input-placeholder {
+.ithril.dropdown :-ms-input-placeholder,
+.ithril.select :-ms-input-placeholder {
   color: inherit;
 }
-.ithril.dropdown :placeholder-shown {
+.ithril.dropdown :placeholder-shown,
+.ithril.select :placeholder-shown {
   color: inherit;
+}
+.ithril.select .chips {
+  padding: 0 10px;
 }
 .ithril.tabs {
   margin-top: 20px;
@@ -243,8 +259,8 @@
   display: inline-block;
   vertical-align: middle;
   font-weight: bold;
-  font-size: 18px;
-  height: 18px;
+  font-size: 20px;
+  height: 20px;
   line-height: 18px;
   margin-left: 8px;
 }

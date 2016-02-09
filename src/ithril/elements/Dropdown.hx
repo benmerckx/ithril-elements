@@ -13,8 +13,8 @@ typedef DropdownOptions = {
 	?placeholder: String
 };
 
-typedef Options = OptionList<String>;
-typedef Item = Option<String>;
+typedef DropdownOptionList = OptionList<String>;
+typedef DropdownOption = Option<String>;
 
 class Dropdown extends Field<DropdownOptions, String> {
 	var query: String = null;
@@ -74,13 +74,12 @@ class Dropdown extends Field<DropdownOptions, String> {
 	public function view() [
 		(div.ithril.dropdown (config=config, 'class'= (show?'open':'')) (focusAttr))
 			($if (show))
-				(Options (
+				(DropdownOptionList (
 					filter=(query!=null?filter:null), 
-					height=40, 
 					onchange=function(e) select(e.field.value)
 				))
 					(key in state.options.keys())
-						(Item (key = key))
+						(DropdownOption (key = key))
 							[state.options.get(key)]
 			(div.main)
 				($if (state.searchable))
