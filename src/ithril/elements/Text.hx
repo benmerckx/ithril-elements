@@ -15,7 +15,7 @@ class Text extends Field<TextOptions, String> {
 	
 	override public function mount() {
 		super.mount();
-		setState({multiline: false, placeholder: ''});
+		setState({multiline: false, placeholder: '', tabindex: 0});
 		value = '';
 	}
 	

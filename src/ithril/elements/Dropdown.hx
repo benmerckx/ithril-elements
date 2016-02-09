@@ -29,14 +29,12 @@ class Dropdown extends Field<DropdownOptions, String> {
 	public function open(?show: Bool) {
 		this.show = show == null ? !this.show : show;
 		dispatch(this.show?Focus:Blur);
-		#if js 
 		if (this.show) {
 			focusEl.focus();
 		} else {
 			focusEl.blur();
 			query = null;
 		}
-		#end
 	}
 	
 	function openClick(e) {

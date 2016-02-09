@@ -79,11 +79,14 @@
 .ithril .field:focus,
 .ithril .field + .mirror:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #a4c6fd inset;
+  border: 1px solid #9b4dca;
 }
 .ithril.checkbox label,
 .ithril.checkbox input {
   cursor: pointer;
+}
+.ithril.checkbox input {
+  margin-right: 15px;
 }
 .ithril.dropdown {
   position: relative;
@@ -92,7 +95,7 @@
   outline: 0;
 }
 .ithril.dropdown.open > .main {
-  border-color: #a4c6fd;
+  border-color: #9b4dca;
   border-bottom-color: transparent;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -132,7 +135,7 @@
   top: 100%;
   width: 100%;
   border: 1px solid #d1d1d1;
-  border-color: #a4c6fd;
+  border-color: #9b4dca;
   border-radius: 3px;
   z-index: 9999999;
   border-top-color: transparent;
@@ -146,7 +149,7 @@
   border-radius: 3px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  border-top: 1px solid #a4c6fd;
+  border-top: 1px solid #9b4dca;
   border-bottom: none;
   margin-top: 0;
   margin-bottom: -1px;
@@ -155,7 +158,7 @@
   border-radius: 3px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom: 1px solid #a4c6fd;
+  border-bottom: 1px solid #9b4dca;
   border-top-color: transparent;
 }
 .ithril.dropdown > .option-list > .option {
@@ -186,7 +189,6 @@
   color: inherit;
 }
 .ithril.tabs {
-  margin: 10px;
   margin-top: 20px;
   position: relative;
 }
@@ -205,13 +207,13 @@
 }
 .ithril.tabs nav a.active {
   background: #f4f5f6;
-  color: #9b4dca;
+  font-weight: bold;
 }
 .ithril.tabs .tab {
   display: block;
   width: 100%;
   background: #f4f5f6;
-  padding: 5px;
+  padding: 15px;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
@@ -228,9 +230,29 @@
   word-wrap: break-word;
   white-space: pre-line;
 }
+.ithril.chip {
+  display: inline-block;
+  border-radius: 16px;
+  height: 32px;
+  line-height: 32px;
+  margin: 8px 8px 0 0;
+  padding: 0 12px;
+  background: #f4f5f6;
+}
+.ithril.chip a.remove {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 18px;
+  height: 18px;
+  line-height: 18px;
+  margin-left: 8px;
+}
 body {
   max-width: 400px;
   margin: 0 auto;
+  padding: 40px 25px;
+  padding-bottom: 80px;
   font-family: 'Roboto', sans-serif;
   color: #606c76;
 }
@@ -241,4 +263,10 @@ h4,
 h5,
 h6 {
   font-weight: 300;
+}
+h1 {
+  font-size: 25px;
+}
+h2 {
+  font-size: 18px;
 }

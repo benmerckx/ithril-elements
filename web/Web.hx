@@ -43,7 +43,13 @@ class Web extends Component {
 			(h2 > 'Searchable')
 			(Dropdown (searchable=true, options=[for(country in countries) country => country]))
 			
-			(h1 > 'More...')
+			(h1 > 'Chips')
+			(Chip (onremove=function() trace('remove')))
+				['One']
+			(Chip)
+				['Two']
+			(Chip)
+				['Three']
 		];
 	}
 
